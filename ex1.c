@@ -32,7 +32,7 @@ int main(){
     printf("Palavras iniciadas com maiuscula: %i\n", qntMaiusculas);
 
 // Maior palavra
-    
+    // ta faltando
     printf("Maior palavra: %s\n", palavraMaior);
 
 //Ocorrencia da palavra "AO"
