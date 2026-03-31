@@ -1,0 +1,53 @@
+// Exercicio 1
+//Alex Araújo Braca RA: 0030482521020
+//Arthur Pereira da Silva RA:  0030482521042
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+
+int main(){
+
+    char frase[200], palavra[46] = "", palavraMaior[46] = "";
+    int  qntPalavras = 0, qntMaiusculas = 0, qntAO = 0;
+
+    printf("Digite uma frase: ");
+    fgets(frase,200,stdin);
+   
+// total de palavras
+     for(int i = 0; i < strlen(frase); i++){
+        if(frase[i]== ' ' || frase[i] == '\n'){
+            qntPalavras++;
+        }
+// Palavras iniciadas com maiuscula
+         if(isupper(frase[i]) ){
+            if (i == 0 || frase[i-1] == ' '){
+                qntMaiusculas++;   
+            }
+        }
+
+    }
+    printf("Total de palavras: %i\n", qntPalavras);
+    printf("Palavras iniciadas com maiuscula: %i\n", qntMaiusculas);
+
+// Maior palavra
+    
+    printf("Maior palavra: %s\n", palavraMaior);
+
+//Ocorrencia da palavra "AO"
+    for (int i = 1; i < strlen(frase); i++){
+        if (toupper(frase[i]) == 'O' && toupper(frase[i-1]) == 'A'){
+             qntAO++; 
+        }
+    }
+    printf("Ocorrencias da palavra 'AO': %i\n", qntAO);
+
+// Exemplo de entrada:
+// Programacao para automacao e inovacao. ACAO GERA TRANSFORMACAO.
+// Exemplo de saída:
+// Total de palavras: 8
+// Palavras iniciadas com maiuscula: 4
+// Maior palavra: TRANSFORMACAO
+// Ocorrencias da palavra 'AO': 5
+}
