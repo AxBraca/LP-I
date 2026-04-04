@@ -10,7 +10,7 @@
 int main(){
 
     char frase[200], palavra[46] = "", palavraMaior[46] = "";
-    int  qntPalavras = 0, qntMaiusculas = 0, qntAO = 0;
+    int  c=0, j = 0,qntPalavras = 0, qntMaiusculas = 0, qntAO = 0;
 
     printf("Digite uma frase: ");
     fgets(frase,200,stdin);
@@ -32,7 +32,30 @@ int main(){
     printf("Palavras iniciadas com maiuscula: %i\n", qntMaiusculas);
 
 // Maior palavra
-    // ta faltando
+    for (int i = 0; i < strlen(frase); i++){
+
+        while(isalpha(frase[i]) && frase[i] != ' '){
+            palavra[j] = frase[i];
+            j++;
+            i++;
+        }
+        j = 0;
+        if (strlen(palavra) > strlen(palavraMaior)){
+            strcpy(palavraMaior, palavra);
+            while (palavra[c] != '\0' ) {   
+                palavra[c] = '\0';
+                c++;
+            }
+            c = 0;
+        }
+        else { 
+            while (palavra[c] != '\0' ) {   
+                palavra[c] = '\0';
+                c++;
+            }
+            c = 0; 
+        }
+    }
     printf("Maior palavra: %s\n", palavraMaior);
 
 //Ocorrencia da palavra "AO"
