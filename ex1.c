@@ -26,7 +26,6 @@ int main(){
                 qntMaiusculas++;   
             }
         }
-
     }
     printf("Total de palavras: %i\n", qntPalavras);
     printf("Palavras iniciadas com maiuscula: %i\n", qntMaiusculas);
@@ -65,12 +64,4 @@ int main(){
         }
     }
     printf("Ocorrencias da palavra 'AO': %i\n", qntAO);
-
-// Exemplo de entrada:
-// Programacao para automacao e inovacao. ACAO GERA TRANSFORMACAO.
-// Exemplo de saída:
-// Total de palavras: 8
-// Palavras iniciadas com maiuscula: 4
-// Maior palavra: TRANSFORMACAO
-// Ocorrencias da palavra 'AO': 5
 }
