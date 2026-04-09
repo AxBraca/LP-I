@@ -40,20 +40,14 @@ int main(){
         }
         j = 0;
         if (strlen(palavra) > strlen(palavraMaior)){
-            strcpy(palavraMaior, palavra);
-            while (palavra[c] != '\0' ) {   
+            strcpy(palavraMaior, palavra);    
+        }
+       
+        while (palavra[c] != '\0' ) {   
                 palavra[c] = '\0';
                 c++;
             }
             c = 0;
-        }
-        else { 
-            while (palavra[c] != '\0' ) {   
-                palavra[c] = '\0';
-                c++;
-            }
-            c = 0; 
-        }
     }
     printf("Maior palavra: %s\n", palavraMaior);
 
