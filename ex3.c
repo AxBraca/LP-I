@@ -101,6 +101,7 @@ switch (menu)
 
     case 3:
         // Filtro: Reservas Pagas
+        printf("Reservas Pagas:\n");
         for (int i=0; i < qntReservas; i++) {
             if (reserva[i].status == 'P') {
                 printf("%-6d | %-20.20s | %-15.15s | %02hhu/%02hhu/%-5u\n",
@@ -121,6 +122,8 @@ switch (menu)
                 &mesFiltro, 
                 &anoFiltro);
 
+        printf("Reservas para a data %2i/%2i:\n", mesFiltro, anoFiltro);
+
         for (int i=0; i < qntReservas; i++) {
             if (reserva[i].dataViagem.mes == mesFiltro && reserva[i].dataViagem.ano == anoFiltro){
                 printf("%-6d | %-20.20s | %-15.15s | %c\n",
@@ -133,7 +136,7 @@ switch (menu)
         break;
 
     case 5:
-        // Filtro: Por Destino
+        // Resumo por Destino
         for (int i = 0; i < qntReservas; i++) {
             encontrado = 0;
 
@@ -152,8 +155,10 @@ switch (menu)
             }
         }
 
+        printf("Destino | Quantidade\n");
+
         for (int i=0; i < totalUnicos; i++) {
-            printf("%s\t| %d\n",
+            printf("%s: %d\n",
             resumo[i].destino,
             resumo[i].qnt);
         }
